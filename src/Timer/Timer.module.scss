@@ -1,0 +1,8 @@
+@import './../styles/settings.scss';
+
+.timer {
+    padding-top: 5*$base-size;
+    text-align: center;
+    font-size: 4*$base-size;
+    color: $color-light;
+}

@@ -1,6 +1,7 @@
 import Timer from "./Timer/Timer.js";
 import Button from "./Button/Button.js";
 import { useEffect, useState } from "react";
+import styles from './App.module.scss';
 
 function App() {
   const [time, setTime] = useState(0);
@@ -21,11 +22,14 @@ function App() {
 
  
   return (
-    <div>
+    <div className={styles.container}>
         <Timer time={time} />
-        <Button onClick={() => setTimer(true)}>Start</Button>
-        <Button onClick={() => setTimer(false)}>Stop</Button>
-        <Button onClick={() => setTimer(setTime(0))}>Reset</Button>
+        <div className={styles.btn}>
+          <Button onClick={() => setTimer(true)}>Start</Button>
+          <Button onClick={() => setTimer(false)}>Stop</Button>
+          <Button onClick={() => setTimer(setTime(0))}>Reset</Button>
+        </div>
+        
     </div>
   );
 }

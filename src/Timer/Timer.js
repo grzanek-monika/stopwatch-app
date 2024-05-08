@@ -1,4 +1,4 @@
-//import styles from './Timer.module.scss';
+import styles from './Timer.module.scss';
 
 const Timer = props => {
 
@@ -16,7 +16,7 @@ const Timer = props => {
     }
 
     return(
-        <div>
+        <div className={styles.timer}>
             {msToTime(props.time)}
         </div>
     )
